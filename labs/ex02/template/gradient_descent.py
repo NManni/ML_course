@@ -3,7 +3,7 @@
 
 Gradient Descent
 """
-
+import numpy as np
 
 def compute_gradient(y, tx, w):
     """Computes the gradient at w.
