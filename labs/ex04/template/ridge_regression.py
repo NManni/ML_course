@@ -26,5 +26,13 @@ def ridge_regression(y, tx, lambda_):
     # ***************************************************
     # COPY YOUR CODE FROM EX03 HERE
     # ridge regression: TODO
+    N, D = np.shape(tx)
+    lambda_prime= lambda_ * 2 * N 
+    I = np.eye(D)
+    w = np.linalg.solve(tx.T @ tx + lambda_prime * I, tx.T @ y)
+
+    #raise NotImplementedError
     # ***************************************************
-    raise NotImplementedError
+    return w 
+    
+    
